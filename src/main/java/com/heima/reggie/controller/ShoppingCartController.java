@@ -12,11 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
-/**
- * @Description
- * @Author rdm
- * @data 2022/5/30 - 18:40
- */
+
 @Slf4j
 @RestController
 @RequestMapping("/shoppingCart")

@@ -21,11 +21,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
-/**
- * @Description
- * @Author rdm
- * @data 2022/5/30 - 20:18
- */
+
 @Service
 public class OrdersServiceImpl extends ServiceImpl<OrdersMapper, Orders> implements OrdersService {
     @Autowired

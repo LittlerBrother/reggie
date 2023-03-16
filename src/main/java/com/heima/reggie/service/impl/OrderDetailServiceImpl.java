@@ -7,11 +7,7 @@ import com.heima.reggie.service.OrderDetailService;
 import org.springframework.stereotype.Service;
 
 
-/**
- * @Description
- * @Author rdm
- * @data 2022/5/30 - 20:19
- */
+
 @Service
 public class OrderDetailServiceImpl extends ServiceImpl<OrderDetailMapper, OrderDetail> implements OrderDetailService {
 }
