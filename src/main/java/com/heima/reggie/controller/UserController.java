@@ -46,12 +46,12 @@ public class UserController {
 
     @PostMapping("/login")
     public R<User> login(@RequestBody Map map,HttpSession session){
-        log.info("map{}",map.toString());
+//        log.info("map{}",map.toString());
 
-        String phone = session.getAttribute("phone").toString();
-        String code = session.getAttribute("code").toString();
+        String phone = (String) map.get("phone").toString();
+        String code =(String)  map.get("code").toString();
 
-        Object sessionCode = session.getAttribute("code");
+        Object sessionCode = session.getAttribute(phone);
         if (sessionCode.equals(code) && sessionCode != null){
             LambdaQueryWrapper<User> userQueryWrapper = new LambdaQueryWrapper<>();
             userQueryWrapper.eq(User::getPhone,phone);
@@ -67,6 +67,5 @@ public class UserController {
         }
         return R.error("登陆失败");
     }
-
 }
 
